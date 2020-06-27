@@ -1,0 +1,38 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="java.css">
+    <link rel="stylesheet" href="java.js">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body {
+            background: red;
+        }
+        
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <button> hide and show </button>
+
+    <p>Lorem ipsum dolor sit amen consenter adipisicing elite. Fugit, eagle?</p>
+    <input type="text">
+    <h3 style="display: none;">welcome</h3>
+    <script>
+        $('p').click(function() {
+            alert('my roles ');
+        });
+        $('button').mouseenter(function() {
+            $('p').toggle();
+        });
+        $('input').keypress(function() {
+            $('h3').toggle(2000);
+        });
+    </script>
+</body>
+
+</html>
