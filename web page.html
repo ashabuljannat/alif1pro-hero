@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> web page 1</title>
+    <link rel="icon" href="img5.jpg">
+
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('body%20image.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+        
+        .nev {
+            text-align: center;
+            height: 100px;
+            width: 100%;
+            background-color: gray;
+            position: relative;
+        }
+        
+        .nev img {
+            left: 0px;
+            position: absolute;
+            opacity: .7;
+        }
+        
+        .nev input {
+            position: absolute;
+            border-radius: 10px;
+            top: 50px;
+            left: 1100px;
+            height: 27px;
+        }
+        
+        .nev ul li {
+            display: inline-block;
+            transition: 1s;
+        }
+        
+        #active,
+        .nev ul li:hover {
+            background: white;
+            border-radius: 5px;
+        }
+        
+        .nev ul li a {
+            color: aqua;
+            text-decoration: none;
+            margin: 15px;
+            padding: 10px;
+            border: 10px
+        }
+        
+        center {
+            color: greenyellow;
+            font-family: sans-serif;
+        }
+        
+        section {
+            margin-top: 80px;
+            height: 350px;
+        }
+        
+        section .bio {
+            background: white;
+            height: 100%;
+            width: 40%;
+            margin-left: 5%;
+            float: left;
+            padding-left: 5px;
+            border-radius: 5px;
+            box-shadow: 10px 10px 30px yellow;
+            overflow: hidden;
+            font-family: sans-serif
+        }
+        
+        section .bio button {
+            background-image: linear-gradient(orange, aqua);
+            padding: 5px;
+            border-radius: 7px;
+        }
+        
+        section .bio img {
+            width: 100%;
+            height: 100%;
+            transition: 2s;
+        }
+        
+        section .bio img:hover {
+            transform: scale(1.1);
+        }
+        
+        .end {
+            margin-top: 80px;
+            height: 400px;
+            width: 100%;
+        }
+        
+        .end div {
+            float: left;
+            height: 100%;
+            margin: 10px 20px;
+            width: 30%;
+        }
+        
+        .end div img {
+            height: 70%;
+            width: 100%;
+            transition: 1s;
+        }
+        
+        .end div img:hover {
+            transform: scale(1.2)
+        }
+        
+        .end div h4 {
+            padding-left: 10px;
+        }
+    </style>
+
+</html>
+
+<body>
+
+    <div class="nev">
+        <input type="text" name="" placeholder="search">
+        <img src="images (3).jpg" height="100%">
+        <h1> Ashabul Jannat Alif </h1>
+        <uL>
+            <li id="active"> <a href="#">About Me </a></li>
+            <li> <a href="#">Home </a></li>
+            <li> <a href="#">My Bio </a></li>
+            <li> <a href="#">My Dream </a></li>
+            <li> <a href="#">For You </a></li>
+        </uL>
+    </div>
+    <center>
+        <h1>About me</h1>
+    </center>
+    <hr>
+
+    <section>
+        <div class="bio">
+            <h2> Web Designer </h2>
+            <h3>Design with Html & Css</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quas ducimus labore impedit culpa molestiae minus perferendis cumque, officia ratione illum consequatur vitae exercitationem, amet sunt dicta, perspiciatis quisquam earum. Earum
+                voluptate animi optio voluptatibus vitae ullam quas ducimus consequuntur recusandae quisquam atque voluptas facilis, consequatur voluptatum sed repellendus dignissimos.</p>
+            <button> contact me</button>
+        </div>
+        <div class="bio">
+            <img src="alif image 2.jpeg">
+        </div>
+    </section>
+    <hr>
+    <section>
+
+        <div class="bio">
+            <img src="alif%20image%201.jpeg">
+        </div>
+        <div class="bio">
+            <h2> Web Developer </h2>
+            <h3>Design with React & Javascript</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quas ducimus labore impedit culpa molestiae minus perferendis cumque, officia ratione illum consequatur vitae exercitationem, amet sunt dicta, perspiciatis quisquam earum. Earum
+                voluptate animi optio voluptatibus vitae ullam quas ducimus consequuntur recusandae quisquam atque voluptas facilis, consequatur voluptatum sed repellendus dignissimos.</p>
+            <button> Hire me</button>
+        </div>
+    </section>
+    <hr>
+    <center>
+        <h1>My Services</h1>
+    </center>
+    <section class="end">
+        <div lass="html"> <img src="Html5.png" height="350px" width="">
+            <h4>HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as interactive forms may be embedded into the rendered page.HTML provides a means to create structured documents by denoting structural
+                semantics for text such as headings, paragraphs, lists, links, quotes and other items.</h4>
+        </div>
+        <div lass="css"><img src="CSS.jpg" alt="" height="" width="">
+            <h4>CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics,
+                enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, and reduce complexity and repetition in the structural content.</h4>
+        </div>
+        <div lass="jquery"><img src="jquery.png" alt="" height="" width="">
+            <h4>JavaScript often abbreviated as JS, is a programming language that conforms to the ECMAScript specification.JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based
+                object-orientation, and first-class functions.</h4>
+        </div>
+
+    </section>
+</body>
+
+</html>
