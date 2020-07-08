@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda E-Commerce</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+
+
+    <style>
+        .bg {
+            background: pink;
+        }
+        
+        .row {
+            padding-left: 20px;
+        }
+        
+        .detail {
+            padding-left: 20px;
+        }
+        
+        .container {
+            margin-bottom: 60px
+        }
+        
+        button span {
+            background: red;
+        }
+        
+        .mob {
+            background-color: yellow;
+            border-radius: 10px;
+        }
+        
+        .laptop {
+            background-color: orange;
+            border-radius: 10px;
+        }
+        
+        .tab {
+            background-color: mediumpurple;
+            border-radius: 10px;
+        }
+        
+        .desktop {
+            background-color: deepskyblue;
+            border-radius: 10px;
+        }
+        
+        .card {
+            border: non;
+            box-shadow: 7px 7px 15px aqua;
+            border-radius: 10px;
+        }
+        
+        .contact {
+            height: 200px;
+            background-color: lightpink;
+            text-align: center;
+        }
+        
+        .shoes {
+            padding-left: 10px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark  sticky-top">
+            <a class="navbar-brand" href="#">
+                <img src="image/logo.png" alt="Panda Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse nav-tabs" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">offers</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Catagory
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#mobile">Mobile</a>
+                            <a class="dropdown-item" href="#tab">Tablet</a>
+                            <a class="dropdown-item" href="#laptop">Laptop</a>
+                            <a class="dropdown-item" href="#desktop">Desktop</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Privacy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact us</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div id="demo" class="carousel slide bg" data-ride="carousel">
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class=""></li>
+                <li data-target="#demo" data-slide-to="1" class=""></li>
+                <li data-target="#demo" data-slide-to="2" class=""></li>
+                <li data-target="#demo" data-slide-to="3" class=""></li>
+            </ul>
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 detail">
+                            <h1>iPhone 11</h1>
+                            <p>New lunch iPhone 11</p>
+                            <h4><del>$1200</del> </h4>
+                            <h3> $1000 Offer price</h3>
+                            <button class="btn btn-outline-light">
+                                <span class="spinner-grow spinner-grow-sm"></span>
+                                Buy Now </button>
+                        </div>
+                        <div class="col-md-6"> <img src="image/mobile.jpg" width="100%" height="100%">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 detail">
+                            <h1> Mackbook</h1>
+                            <p>Mackbook with intelligent Mac OS</p>
+                            <h4><del>$1600</del> </h4>
+                            <h3> $1500 Offer price</h3>
+                            <button class="btn btn-outline-light">
+                                <span class="spinner-grow spinner-grow-sm"></span>
+                                Buy Now </button>
+                        </div>
+                        <div class="col-md-6"><img src="image/laptop2.jpg" width="100%" height="100%">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 detail">
+                            <h1>Samsung_Galaxy_Tab_S6</h1>
+                            <p>We love the Galaxy tab</p>
+                            <h4><del>$700</del> </h4>
+                            <h3> $600 Offer price</h3>
+
+                            <button class="btn btn-outline-light">
+                                <span class="spinner-grow spinner-grow-sm"></span>
+                                Buy Now </button>
+                        </div>
+                        <div class="col-md-6"> <img src="image/tab.jpg" alt="Tablet" width="100%" height="100%">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 detail">
+                            <h1>Apple Desktop</h1>
+                            <p>We love the Big Apple Desktop</p>
+                            <h4><del>$1450</del> </h4>
+                            <h3> $1300 Offer price</h3>
+
+                            <button class="btn btn-outline-light">
+                                <span class="spinner-grow spinner-grow-sm"></span>
+                                Buy Now </button>
+                        </div>
+                        <div class="col-md-6"> <img src="image/desktop1.jpg" alt="desktop" width="100%" height="100%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>-->
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Category</h2>
+        <div class="row ">
+            <div class="col-md-3 d-flex justify-content-between mob">
+                <h3>Mobile</h3>
+                <img src="image/mobile2.png" height="100px" width="105px">
+            </div>
+            <div class="col-md-3 d-flex justify-content-between laptop">
+                <h3>Laptop</h3>
+                <img src="image/laptop4.jpg" height="100px" width="100px">
+            </div>
+            <div class="col-md-3 d-flex justify-content-between tab">
+                <h3>Tablet</h3>
+                <img src="image/tab3.jpg" height="100px" width="100px">
+            </div>
+            <div class="col-md-3 d-flex justify-content-between desktop">
+                <h3>Desktop</h3>
+                <img src="image/dasktop%20(2).jpg" height="100px" width="100px">
+            </div>
+        </div>
+    </div>
+
+
+    <!--   mobile category-->
+
+    <div class="container">
+        <h2 id="mobile">Mobile</h2>
+        <h5 class="text-right">See all >></h5>
+        <div class="card-deck">
+            <div class="card">
+                <img src="image/iphone.png" class="card-img-top" height="400px" width="100px">
+                <div class="card-body">
+                    <h4 class="card-title">iPhone 11 Pro</h4>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <h5><del>$1450</del> </h5>
+                    <h4> $1300 Offer price</h4>
+
+                    <button class="btn btn-outline-info">
+                        <span class="spinner-grow spinner-grow-sm"></span>
+                        Buy Now </button>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="image/Samsung-Galaxy-S20-Ultra-5G-giant-600x600.jpg" class="card-img-top" height="400px" width="100px">
+                <div class="card-body">
+                    <h4 class="card-title">Samsung-Galaxy-S20</h4>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <h5><del>$1450</del> </h5>
+                    <h4> $1300 Offer price</h4>
+
+                    <button class="btn btn-outline-info">
+                        <span class="spinner-grow spinner-grow-sm"></span>
+                        Buy Now </button>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="image/note%2010%20pro.jpg" class="card-img-top" height="400px" width="100px">
+                <div class="card-body">
+                    <h4 class="card-title">Xiaomi Note 10 Pro</h4>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <h5><del>$1450</del> </h5>
+                    <h4> $1300 Offer price</h4>
+
+                    <button class="btn btn-outline-info">
+                        <span class="spinner-grow spinner-grow-sm"></span>
+                        Buy Now </button>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--laptop category-->
+
+    <div class="container">
+        <h2 id="laptop">Laptop</h2>
+        <h5 class="text-right">See all >></h5>
+        <div class="card-deck">
+            <div class="card">
+                <img src="image/macbook-air-2018.jpg" class="card-img-top" height="200px">
+                <div class="card-body">
+                    <h4 class="card-title">Mackbook-air-2018</h4>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <h5><del>$1450</del> </h5>
+                    <h4> $1300 Offer price</h4>
+
+                    <button class="btn btn-outline-info">
+                        <span class="spinner-grow spinner-grow-sm"></span>
+                        Buy Now </button>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="image/dell%20xps%2013.jpg" class="card-img-top" height="200px">
+                <div class="card-body">
+                    <h4 class="card-title">Dell XPS 13</h4>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <h5><del>$1450</del> </h5>
+                    <h4> $1300 Offer price</h4>
+
+                    <button class="btn btn-outline-info">
+                        <span class="spinner-grow spinner-grow-sm"></span>
+                        Buy Now </button>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="image/hp.png" class="card-img-top" height="200px">
+                <div class="card-body">
+                    <h4 class="card-title">HP inspire</h4>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <h5><del>$1450</del> </h5>
+                    <h4> $1300 Offer price</h4>
+
+                    <button class="btn btn-outline-info">
+                        <span class="spinner-grow spinner-grow-sm"></span>
+                        Buy Now </button>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container ">
+        <div class="row ">
+
+            <div class="col-md-6 d-flex align-items-center">
+                <div class="col-md-3 bag ">
+                    <img src="categories/bag.png" height="200px" width="200px"></div>
+                <div class="col-md-3 shoes">
+                    <img src="categories/shoes.png" height="200px" width="200px" alt="">
+                    <img src="categories/ator.png" height="200px" width="200px" alt="">
+                </div>
+            </div>
+
+            <div class="col-md-6"><img src="categories/pale-order.png" alt="" height="100%" width="100%"></div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="contact text-center">
+            <h4>Stay With Us</h4>
+            <h6>And Get New Product And Offers</h6>
+            <input type="text">
+            <input class="btn btn-info" type="submit" value="Submit">
+        </div>
+    </div>
+
+    <div class="container text-right">
+        <small>@Copyright 2020 by panda.com All Rights Reserved.
+Powered by Hot gadget.</small>
+    </div>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
