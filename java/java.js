@@ -37,9 +37,9 @@ var alif =a;*/
 // $('p').click(function() {
 //     alert('my roles ');
 // });
-$('button').click(function() {
-    $('p').toggle();
-});
+// $('button').click(function() {
+//     $('p').toggle();
+// });
 
 
 // $('p').click(function() {
@@ -48,3 +48,30 @@ $('button').click(function() {
 // $('button').click(function() {
 //     $('p').toggle();
 // });
+
+//    var num = 11;
+//     while (num < 15) {
+
+//         console.log(num);
+//         num++;
+//     }
+
+// var num = 10;
+// while (num < 15) {
+
+//     console.log(number);
+//     number=num+1;
+// }
+
+var student1 = {
+    name: 'abir',
+    roll: 12,
+    number: 2345
+}
+var student2 = {
+    name: 'jahid',
+    roll: 15,
+    number: 23455
+}
+document.write(student1);
+document.write(student2);
