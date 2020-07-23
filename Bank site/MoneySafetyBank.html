@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Safety Bank</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        center {
+            margin: 50px 0 70px 0;
+        }
+        
+        #submit-area {
+            box-shadow: 5px 5px 10px gray;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 0 70px;
+        }
+        
+        #home {
+            display: none;
+            margin: 0 70px;
+        }
+        
+        .deposit {
+            background-color: slateblue;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+        }
+        
+        .withdraw {
+            background-color: lightsalmon;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+        }
+        
+        .balance {
+            background-color: orange;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="login-area">
+        <center>
+            <h2>Welcome To MoneySafety Bank</h2>
+            <h4><i>"Your Money Safety , Our Priority"</i></h4>
+        </center>
+        <div id="submit-area">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Your Email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button class="btn btn-success" id="submit-btn">Login</button>
+        </div>
+    </div>
+    <div id="home">
+        <center>
+            <h3>'Welcome for using Money Safety Bank'</h3>
+            <h4>Your Balance is...</h4>
+        </center>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="deposit">
+                    <h4>Deposit</h4>
+                    <h2>$ <span id="currentDeposit">100</span> </h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="withdraw">
+                    <h4>Withdraw</h4>
+                    <h2>$ <span id="currentWithdraw">50</span> </h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="balance">
+                    <h4>Balance</h4>
+                    <h2>$ <span id="currentBalance">1050</span> </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 my-5">
+                <div id="submit-area">
+                    <h2>Deposit</h2>
+                    <input type="number" class="form-control" id="depositInput" placeholder="$ What amount you want deposit "><br>
+                    <button class="btn btn-warning" id="depositBtn">Deposit</button>
+                </div>
+            </div>
+            <div class="col-md-6 my-5 ">
+                <div id="submit-area">
+                    <h2>Withdraw</h2>
+                    <input type="number" class="form-control" id="withdrawInput" placeholder=" $ What amount you want withdraw "><br>
+                    <button class="btn btn-danger " id="withdrawBtn">Withdraw</button></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('submit-btn').addEventListener("click", function() {
+            document.getElementById('login-area').style.display = "none";
+            document.getElementById('home').style.display = "block";
+        });
+
+        document.getElementById('depositBtn').addEventListener("click", function() {
+            var totalDeposit = parseFloat(document.getElementById('depositInput').value) +
+                parseFloat(document.getElementById('currentDeposit').innerText);
+            var totalBalance = parseFloat(document.getElementById('depositInput').value) +
+                parseFloat(document.getElementById('currentBalance').innerText);
+
+            document.getElementById('currentBalance').innerText = totalBalance;
+            document.getElementById('currentDeposit').innerText = totalDeposit;
+            document.getElementById('depositInput').value = '';
+        });
+
+        document.getElementById('withdrawBtn').addEventListener("click", function() {
+            var totalWithdraw = parseFloat(document.getElementById('withdrawInput').value) +
+                parseFloat(document.getElementById('currentWithdraw').innerText);
+            var totalBalance = parseFloat(document.getElementById('currentBalance').innerText) -
+                parseFloat(document.getElementById('withdrawInput').value);
+
+            document.getElementById('currentBalance').innerText = totalBalance;
+            document.getElementById('currentWithdraw').innerText = totalWithdraw;
+            document.getElementById('withdrawInput').value = '';
+        });
+    </script>
+</body>
+
+</html>

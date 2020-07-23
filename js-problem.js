@@ -50,7 +50,7 @@
 //     } else {
 //         var dosErjonno = 10 * 15 * 1000;
 //         var bisErjonno = 10 * 12 * 1000;
-//         var asol = floor - 20;
+//         var asol = floor - 20;           var asoErJonno = (floor - 20) * 10 * 1000;
 //         var asolErjonno = asol * 10 * 1000;
 //         var thirdBrick = dosErjonno + bisErjonno + asolErjonno;
 //         console.log(thirdBrick);
