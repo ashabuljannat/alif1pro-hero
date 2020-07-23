@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Shopping Cart</title>
     <meta charset="utf-8">
@@ -20,61 +21,118 @@
                                 <img src="images/product-1.png" alt="">
                                 <h5>iPhone 11 128GB Black</h5>
                             </div>
-
                             <div class="col-md-5 center-item">
                                 <div class="input-group number-spinner">
-                                    <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                                    <input type="text" class="form-control text-center" value="1">
-                                    <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                                    <button class="btn btn-default" id="mobileMinus"><i class="fas fa-minus"></i></button>
+                                    <input type="text" class="form-control text-center" id="mobileValue" value="0">
+                                    <button class="btn btn-default" id="mobilePlus"><i class="fas fa-plus "></i></button>
                                 </div>
-                                <h5>$1219</h5>
-                                <img src="images/remove.png" alt="" class="remove-item">
+                                <h5>$<span id="mobilePrice">0</span></h5>
+                                <img src="images/remove.png " alt=" " class="remove-item ">
                             </div>
                         </div>
                     </div>
 
-                    <div class="cart-item">
-                        <div class="row">
-                            <div class="col-md-7 center-item mx-auto">
-                                <img src="images/product-2.png" alt="">
+                    <div class="cart-item ">
+                        <div class="row ">
+                            <div class="col-md-7 center-item mx-auto ">
+                                <img src="images/product-2.png " alt=" ">
                                 <h5>iPhone 11 Silicone Case - Black</h5>
                             </div>
-                            <div class="col-md-5 center-item">
-                                <div class="input-group number-spinner">
-                                    <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                                    <input type="text" class="form-control text-center" value="1">
-                                    <button class="btn btn-default"><i class="fas fa-plus"></i></button>
-
+                            <div class="col-md-5 center-item ">
+                                <div class="input-group number-spinner ">
+                                    <button class="btn btn-default " id="caseMinus"><i class="fas fa-minus "></i></button>
+                                    <input type="text " class="form-control text-center " id="caseValue" value="0">
+                                    <button class="btn btn-default " id="casePlus"><i class="fas fa-plus "></i></button>
                                 </div>
-                                <h5>$59</h5>
-                                <img src="images/remove.png" alt="" class="remove-item">
+                                <h5>$<span id="casePrice">0</span></h5>
+                                <img src="images/remove.png " alt=" " class="remove-item ">
                             </div>
                         </div>
                     </div>
 
-                    <div class="cart-item">
-                        <div class="row">
-
-                            <div class="col-md-8">
+                    <div class="cart-item ">
+                        <div class="row ">
+                            <div class="col-md-8 ">
                                 <h5>Subtotal: </h5>
-                                <h5>Tax:</h5>
+                                <h5>Tax:(25%)</h5>
                                 <h5>Total:</h5>
                             </div>
-
-                            <div class="col-md-4 status">
-                                <h5>$1,278</h5>
-                                <h5>$0</h5>
-                                <h5>$1,278</h5>
+                            <div class="col-md-4 status ">
+                                <h5>$<span id="subTotal">0</span></h5>
+                                <h5>$<span id="tax">0</span></h5>
+                                <h5>$<span id="total">0</span>
+                                </h5>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-12 pt-4 pb-4">
-                        <button type="button" class="btn btn-success check-out">Check Out</button>
+
+                    <div class="col-md-12 py-4 ">
+                        <button type="button " class="btn btn-success check-out ">Add Cart</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+        // for  mobile plus button
+        document.getElementById('mobilePlus').addEventListener("click", function() {
+            var price = parseFloat(document.getElementById('mobilePrice').innerText) + 100;
+            document.getElementById('mobilePrice').innerText = price;
+
+            var subTotalMobile = document.getElementById('subTotal').innerText = price;
+            var taxMobile = document.getElementById('tax').innerText = price * .25;
+            document.getElementById('total').innerText = subTotalMobile + taxMobile;
+
+
+            var value = parseInt(document.getElementById('mobileValue').value) + 1;
+            document.getElementById('mobileValue').value = value;
+        });
+
+        // for mobile minus button
+        document.getElementById('mobileMinus').addEventListener("click", function() {
+            var price = parseFloat(document.getElementById('mobilePrice').innerText) - 100;
+            document.getElementById('mobilePrice').innerText = price;
+
+            var SubTotalMobile = document.getElementById('subTotal').innerText = price;
+            var TaxMobile = document.getElementById('tax').innerText = price * .25;
+            document.getElementById('total').innerText = SubTotalMobile + TaxMobile;
+
+
+            var value = parseInt(document.getElementById('mobileValue').value) - 1;
+            document.getElementById('mobileValue').value = value;
+        });
+
+
+        // for case plus button 
+        document.getElementById('casePlus').addEventListener("click", function() {
+            var price = parseFloat(document.getElementById('casePrice').innerText) + 50;
+            document.getElementById('casePrice').innerText = price;
+
+            var subTotalCase = document.getElementById('subTotal').innerText = price;
+            var taxCase = document.getElementById('tax').innerText = price * .25;
+            document.getElementById('total').innerText = subTotalCase + taxCase;
+
+
+            var value = parseInt(document.getElementById('caseValue').value) + 1;
+            document.getElementById('caseValue').value = value;
+        });
+
+        //for case minus button 
+        document.getElementById('caseMinus').addEventListener("click", function() {
+            var price = parseFloat(document.getElementById('casePrice').innerText) - 50;
+            document.getElementById('casePrice').innerText = price;
+
+            var SubTotalCase = document.getElementById('subTotal').innerText = price;
+            var TaxCase = document.getElementById('tax').innerText = price * .25;
+            document.getElementById('total').innerText = SubTotalCase + TaxCase;
+
+
+            var value = parseInt(document.getElementById('caseValue').value) - 1;
+            document.getElementById('caseValue').value = value;
+        });
+    </script>
 </body>
 
 </html>
